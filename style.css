@@ -8,16 +8,51 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Нисэж буй эрвээхэйнүүдийн хөдөлгөөн */
+.butterfly {
+    position: absolute;
+    font-size: 1.5rem;
+    z-index: 10;
+    pointer-events: none;
+    animation: fly 12s infinite linear;
+}
+
+.b1 { top: 15%; left: -10%; animation-delay: 0s; }
+.b2 { top: 45%; left: -10%; animation-delay: 4s; animation-duration: 15s; }
+.b3 { top: 75%; left: -10%; animation-delay: 8s; animation-duration: 10s; }
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(30vw, -40px) rotate(15deg);
+    }
+    50% {
+        transform: translate(60vw, 30px) rotate(-10deg);
+    }
+    75% {
+        transform: translate(85vw, -20px) rotate(10deg);
+    }
+    100% {
+        transform: translate(110vw, 10deg) rotate(0deg);
+    }
 }
 
 .container {
     width: 100%;
-    max-width: 750px;
+    max-width: 800px;
     background: white;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -76,6 +111,10 @@ header h1 {
     background-color: #2980b9;
 }
 
+.btn:active {
+    transform: scale(0.98);
+}
+
 .hidden-content {
     display: none;
     margin-top: 15px;
@@ -117,32 +156,34 @@ header h1 {
     font-size: 0.9rem;
 }
 
-/* Цэцэг ургуулах хэсгийн загвар */
+/* 8 ваартай хэсгийн загвар */
 .pots-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
     margin-top: 25px;
-    height: 140px;
+    height: 130px;
     background: #f0f4f8;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 15px;
+    overflow-x: auto;
 }
 
 .pot-wrapper {
     position: relative;
     cursor: pointer;
     text-align: center;
-    width: 60px;
-    height: 120px;
+    width: 45px;
+    height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    flex-shrink: 0;
 }
 
 .pot {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     z-index: 2;
     transition: transform 0.2s;
 }
@@ -151,19 +192,18 @@ header h1 {
     transform: scale(1.1);
 }
 
-/* Цэцгийн бүтцийн анхны төлөв (жижиг, харагдахгүй) */
+/* Цэцгийн бүтэц */
 .flower {
     position: absolute;
-    bottom: 40px;
-    width: 40px;
-    height: 60px;
+    bottom: 35px;
+    width: 35px;
+    height: 50px;
     transform: scale(0);
     transform-origin: bottom center;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1;
 }
 
-/* Ваар дээр дархад идэвхжих хэсэг (Цэцэг ургаж дэлбээлнэ) */
 .pot-wrapper.active .flower {
     transform: scale(1);
 }
@@ -171,19 +211,19 @@ header h1 {
 .stem {
     position: absolute;
     bottom: 0;
-    left: 18px;
-    width: 4px;
-    height: 40px;
+    left: 16px;
+    width: 3px;
+    height: 35px;
     background-color: #27ae60;
     border-radius: 2px;
 }
 
 .center-dot {
     position: absolute;
-    top: 10px;
-    left: 12px;
-    width: 16px;
-    height: 16px;
+    top: 8px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
     background-color: #f1c40f;
     border-radius: 50%;
     z-index: 3;
@@ -191,16 +231,16 @@ header h1 {
 
 .petal {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background-color: #e74c3c;
     border-radius: 50%;
 }
 
-.p1 { top: 0px; left: 12px; }
-.p2 { top: 10px; left: 2px; }
-.p3 { top: 20px; left: 12px; }
-.p4 { top: 10px; left: 22px; }
+.p1 { top: 0px; left: 10px; }
+.p2 { top: 8px; left: 2px; }
+.p3 { top: 16px; left: 10px; }
+.p4 { top: 8px; left: 18px; }
 
 footer {
     border-top: 1px solid #eaeaea;
