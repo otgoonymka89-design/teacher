@@ -22,11 +22,13 @@
                 
                 <div id="memory-content" class="hidden-content">
                     <div class="image-container">
+                        <!-- photo.jpg гэсэн зургаа файлуудынхаа хамт хуулахаа мартуузай -->
                         <img src="photo.jpg" alt="Ангийн дурсамж зураг" class="memory-img">
                     </div>
                 </div>
             </div>
 
+            <!-- Талархлын үг болон Шүлэг -->
             <div class="card">
                 <h2>Талархлын үг</h2>
                 <p>"Мэдлэгийн түлхүүрийг атгуулж, мэргэжлийн эзэн болоход минь тусалж буй эрхэм багш тандаа эрүүл энх, аз жаргал хүсье!"</p>
@@ -41,6 +43,50 @@
                     </p>
                 </div>
                 <span class="author">- Оюутнуудын төлөөлөл -</span>
+            </div>
+
+            <!-- ШИНЭ: Ваартай цэцэг ургуулах хэсэг -->
+            <div class="card garden-card">
+                <h2>🌷 Багшдаа зориулж цэцэг ургуулцгаая</h2>
+                <p>Доорх ваарууд дээр дарж багшдаа зориулан цэцэг дэлбээлээрэй!</p>
+                
+                <div class="pots-container">
+                    <div class="pot-wrapper" onclick="bloomFlower(this)">
+                        <div class="flower">
+                            <div class="petal p1"></div>
+                            <div class="petal p2"></div>
+                            <div class="petal p3"></div>
+                            <div class="petal p4"></div>
+                            <div class="center-dot"></div>
+                            <div class="stem"></div>
+                        </div>
+                        <div class="pot">🏺</div>
+                    </div>
+
+                    <div class="pot-wrapper" onclick="bloomFlower(this)">
+                        <div class="flower">
+                            <div class="petal p1"></div>
+                            <div class="petal p2"></div>
+                            <div class="petal p3"></div>
+                            <div class="petal p4"></div>
+                            <div class="center-dot"></div>
+                            <div class="stem"></div>
+                        </div>
+                        <div class="pot">🏺</div>
+                    </div>
+
+                    <div class="pot-wrapper" onclick="bloomFlower(this)">
+                        <div class="flower">
+                            <div class="petal p1"></div>
+                            <div class="petal p2"></div>
+                            <div class="petal p3"></div>
+                            <div class="petal p4"></div>
+                            <div class="center-dot"></div>
+                            <div class="stem"></div>
+                        </div>
+                        <div class="pot">🏺</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -57,6 +103,10 @@
             } else {
                 element.style.display = "block";
             }
+        }
+
+        function bloomFlower(element) {
+            element.classList.toggle('active');
         }
     </script>
 </body>
