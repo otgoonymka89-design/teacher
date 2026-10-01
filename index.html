@@ -12,15 +12,19 @@
             <h1>🌸 Багш нарын баярын мэнд хүргэе! 🌸</h1>
             <p class="subtitle">Бидэнд эрдэм мэдлэг, амьдралын ухаан хайрладаг эрхэм хүндэт багш таньдаа зориулав.</p>
         </header>
-<button>
-    <section class="cards-section">
+
+        <section class="cards-section">
             <!-- Дурсамжийн хэсэг -->
             <div class="card">
                 <h2>Манай ангийн дурсамж</h2>
-                <p>Хамтдаа өнгөрүүлсэн мөч бүр бидний хувьд үнэ цэнэтэй байдаг. Биднийг тусалж дэмжиж, Өөрийн хүүхдүүд мэт ханддаг таньдаа баярлалаа!</p>
-                <button class="btn" onclick="toggleContent('memory-content')">Дурсамж үзэх (Зураг, Бичлэг)</button>
+                <p>Хамтдаа өнгөрүүлсэн мөч бүр бидний хувьд үнэ цэнэтэй байдаг. Биднийг тусалж дэмжиж, өөрийн хүүхэд шиг ханддаг тандаа баярлалаа!</p>
+                <button class="btn" onclick="toggleContent('memory-content')">Дурсамж үзэх (Зураг)</button>
+                
                 <div id="memory-content" class="hidden-content">
-                    <p>📸 <em>(https://scontent.fuln2-2.fna.fbcdn.net/v/t1.15752-9/706829230_1231689442220557_6028254602292266943_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1153&ctp=s2048x1153&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ir0_c0j3flkQ7kNvwHOAMOM&_nc_oc=AdpmLi6KCNckRMDfyjdj2XPvaaIj4pU0Q8QLirnorvpswhQvVlNPTBq6Evq7b9z0Umo&_nc_zt=23&_nc_ht=scontent.fuln2-2.fna&_nc_ss=7b2a8&oh=03_Q7cD6gFvS2nAIWHfOm6DCG5XqDXtT1kuYrZkqT3QHxsoUTy3Iw&oe=6AE56BEE)</em></p>
+                    <div class="image-container">
+                        <!-- photo.jpg гэсэн нэртэй зургийг төслийн хавтас руугаа хуулж хийгээрэй -->
+                        <img src="photo.jpg" alt="Ангийн дурсамж зураг" class="memory-img">
+                    </div>
                 </div>
             </div>
 
@@ -29,6 +33,7 @@
                 <h2>Талархлын үг</h2>
                 <p>"Мэдлэгийн түлхүүрийг атгуулж, мэргэжлийн эзэн болоход минь тусалж буй эрхэм багш тандаа эрүүл энх, аз жаргал хүсье!"</p>
                 <button class="btn" onclick="toggleContent('poem-content')">Багшдаа зориулсан шүлэг унших</button>
+                
                 <div id="poem-content" class="hidden-content poem-box">
                     <p>
                         Техник хэрэгсэл, лабораторийн дунд эрдэм өвөртлүүлсэн,<br>
@@ -40,8 +45,7 @@
                 <span class="author">- Оюутнуудын төлөөлөл -</span>
             </div>
         </section>
-</button>
-        
+
         <footer>
             <p>Хүндэтгэсэн: Политехникийн коллежийн суралцагчид</p>
         </footer>
