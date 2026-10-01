@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 800px;
+    max-width: 850px;
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -30,21 +30,28 @@ header h1 {
     color: #7f8c8d;
     font-size: 1.1rem;
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 .cards-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 30px;
 }
 
 .card {
     background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #3498db;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 6px solid #3498db;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 .card h2 {
@@ -53,10 +60,53 @@ header h1 {
     font-size: 1.4rem;
 }
 
+.memory-content {
+    margin-top: 15px;
+    background: #eef6fc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #3498db;
+}
+
+.fun-badge {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.memory-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.poem-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.poem-box {
+    background: #fffdf9;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.poem-box p {
+    margin: 4px 0;
+}
+
 .author {
     display: block;
     margin-top: 10px;
-    font-style: italic;
+    font-weight: bold;
     color: #555;
     text-align: right;
 }
